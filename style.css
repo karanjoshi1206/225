@@ -4,6 +4,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
 }
 img {
   border-radius: 2rem;
@@ -199,13 +201,9 @@ input[type="checkbox"]:checked ~ .gallerycontent {
   border: none;
   border-radius: 2rem;
   cursor: pointer;
+  z-index: 999999999;
 }
 
-.membership_container {
-  padding: 2rem 0;
-  width: 100vw;
-  background-color: rgba(255, 146, 168, 0.418);
-}
 .heading {
   text-align: center;
   font-size: 3rem;
@@ -214,24 +212,7 @@ input[type="checkbox"]:checked ~ .gallerycontent {
   text-align: center;
   font-size: 2rem;
 }
-.membership {
-  margin: 5rem 8rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.memb {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem 0;
-}
-.memb i {
-  font-size: 4rem;
-  margin-right: 1rem;
-}
+
 .connect {
   background-attachment: fixed;
   background-image: url("img.jpg");
@@ -312,6 +293,192 @@ input[type="checkbox"]:checked ~ .gallerycontent {
 footer {
   font-size: 1.5rem;
 }
+
+/* ABOUT PAGE STYLING */
+.about_hero_text {
+  background: linear-gradient(rgba(0, 82, 223, 0.9), rgba(34, 115, 255, 0.24)),
+    url("./aboutbg.jpg") fixed center center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem;
+}
+.about_hero_text h1 {
+  color: #fff;
+  text-align: center;
+
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+.about_hero_text p {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+}
+.about_hero_text a {
+  margin-top: 3rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: black;
+  font-weight: bold;
+  padding: 1rem;
+  background-color: yellow;
+  border-radius: 3rem;
+  transition: 0.3s all ease;
+}
+.about_hero_text a:hover {
+  background-color: black;
+  color: yellow;
+  font-weight: 400;
+}
+.knowmore {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 5rem;
+}
+.knowimg img {
+  height: 40rem;
+  width: 40rem;
+}
+.knowtext h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: rgb(56, 242, 255);
+}
+.knowtext h1::first-letter {
+  font-size: 6rem;
+}
+.knowtext p {
+  font-size: 1.5rem;
+}
+.knowtext p:first-letter {
+  font-size: 4rem;
+}
+
+.teamheading {
+  font-size: 4rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.teamcontainer {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.team {
+  overflow: hidden;
+  position: relative;
+  height: 30rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+  margin-bottom: 3rem;
+}
+.membphoto {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.memb1 {
+  background: url("/memb.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.memb2 {
+  background: url("/memb2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.memb3 {
+  background: url("/memb3.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.memb4 {
+  background: url("/memb4.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.membinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: -30rem;
+  transition: 0.7s all ease-in-out;
+  transform-origin: top;
+  height: 100%;
+  width: 100%;
+}
+.membinfo h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
+  font-family: "Poppins", sans-serif;
+}
+.membinfo p {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-family: "Balsamiq Sans", cursive;
+}
+.membicons {
+  text-align: center;
+  width: 100%;
+  transition: 0.7s all ease-in-out;
+  transform-origin: bottom;
+  position: absolute;
+  bottom: -30rem;
+}
+.fab {
+  color: white;
+  font-size: 2rem;
+  margin: 1rem 2rem;
+}
+
+.team:hover .membicons {
+  bottom: 0;
+}
+.team:hover .membinfo {
+  background: linear-gradient(
+    225deg,
+    rgba(0, 0, 255, 0.349),
+    rgba(0, 204, 255, 0.459)
+  );
+  top: 0rem;
+}
+
+/* MEMBERSHIP  STYLING */
+
+.membership main {
+  margin-top: 10rem;
+}
+.display-4 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.lead {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.memberlist li {
+  font-size: 2rem;
+}
+
 @media (max-width: 768px) {
   html {
     font-size: 50%;
@@ -328,6 +495,15 @@ footer {
 @media (max-width: 660px) {
   html {
     font-size: 45%;
+  }
+  .knowmore {
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+  }
+  .knowimg img {
+    height: 35rem;
+    width: 35rem;
   }
   .form_text {
     width: 100%;
